@@ -1,2 +1,15 @@
-node_modules
+node_modules/
+.npm
+dist/
 bundle.js
+bundle.js.map
+DronePhoto/
+DJI_0110.JPG
+DJI_0120.JPG
+DJI_0223.JPG
+DJI_0273.JPG
+DJI_0357.JPG
+DJI_0378.JPG
+DJI_0420.JPG
+DJI_0438.JPG
+DJI_0444.JPG

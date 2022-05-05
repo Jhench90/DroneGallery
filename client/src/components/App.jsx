@@ -6,6 +6,7 @@ import NatureBreak from './NatureBreak.jsx';
 import Productivity from './Productivity.jsx';
 import Ukulele from './Ukulele.jsx';
 import AboutMe from './AboutMe.jsx';
+import Blogs from './Blogs.jsx';
 
 class App extends React.Component {
   constructor(props){
@@ -39,14 +40,18 @@ class App extends React.Component {
     return (
       <div className="appcontainer">
         <div className="navbar">
-          {/* <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'firstwebsite')}}>First Website</button>
+          <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'firstwebsite')}}>First Website</button>
           <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'leagues')}}>Leagues</button>
-          <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'productivity')}}>Productivity</button> */}
+          <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'productivity')}}>Productivity</button>
+          <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'blogs')}}>Blogs</button>
           <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'drone')}}>Drone</button>
-          {/* <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'ukulele')}}>Ukulele</button>
-          <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'naturebreak')}}>Nature Break</button> */}
+          <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'naturebreak')}}>Nature Break</button>
+          <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'ukulele')}}>Ukulele</button>
           <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'aboutme')}}>About Me</button>
         </div>
+        <div className="content">
+
+
           <div>{'firstwebsite' == this.state.landingpage ? <FirstWebsite /> : null}</div>
           <div>{'leagues' == this.state.landingpage ? <Leagues /> : null}</div>
           <div>{'drone' == this.state.landingpage ? <Drone /> : null}</div>
@@ -54,6 +59,11 @@ class App extends React.Component {
           <div>{'productivity' == this.state.landingpage ? <Productivity /> : null}</div>
           <div>{'naturebreak' == this.state.landingpage ? <NatureBreak /> : null}</div>
           <div>{'aboutme' == this.state.landingpage ? <AboutMe /> : null}</div>
+          <div>{'blogs' == this.state.landingpage ? <Blogs /> : null}</div>
+        </div>
+        <div style={{width: '1650px', textAlign: 'center'}}>© 2022 Joel Hench. Made possible with React.js, Bootstrap, ArangoDB, and DJI.</div>
+
+
       </div>
     );
   };

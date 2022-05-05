@@ -22,7 +22,7 @@ class Drone extends React.Component {
         frontpage: [],
         Yosemite: [{file: '/DronePhoto/DJI_0110.JPG', descr: "Yosemite, April 2021"},
         {file: '/DronePhoto/DJI_0120.JPG', descr: "Tenaya Lodge, April 2021"},],
-        Hawaii: [{file: '/DronePhoto/DJI_0223.JPG', descr: "ʻĪao Valley State Monument, Maui, October 2021"},
+        Maui: [{file: '/DronePhoto/DJI_0223.JPG', descr: "ʻĪao Valley State Monument, Maui, October 2021"},
         {file: '/DronePhoto/DJI_0273.JPG', descr: "Hakena Beach, Maui, October 2021"},
         {file: '/DronePhoto/DJI_0357.JPG', descr: "Pīpīwai Trail, Maui, October 2021"},
         {file: '/DronePhoto/DJI_0378.JPG', descr: "Wailua, Kauai, October 2021"},],
@@ -37,6 +37,7 @@ class Drone extends React.Component {
   }
   render () {
     var key = 0
+    var count = 0
     var myVideoStyle = {
       margin: 'auto',
       right: '0',
@@ -49,7 +50,7 @@ class Drone extends React.Component {
         <div id="triplinks" style={{float:'left', width: '12%'}}>
           <h4 className="triplinks" style={{textDecoration: 'underline'}} onClick={(e)=>{this.setDisplay('frontpage')}}>Destinations</h4>
           <h4 className="triplinks" onClick={(e)=>{this.setDisplay('Yosemite')}}>Yosemite</h4>
-          <h4 className="triplinks" onClick={(e)=>{this.setDisplay('Hawaii')}}>Hawaii</h4>
+          <h4 className="triplinks" onClick={(e)=>{this.setDisplay('Maui')}}>Maui</h4>
           <h4 className="triplinks" onClick={(e)=>{this.setDisplay('SanFrancisco')}}>San Francisco</h4>
           <h4 className="triplinks" onClick={(e)=>{this.setDisplay('Pinnacles')}}>Pinnacles</h4>
           <h4 className="triplinks" onClick={(e)=>{this.setDisplay('Boston')}}>Boston</h4>
@@ -63,55 +64,52 @@ class Drone extends React.Component {
           <source src='/DronePhoto/Herov4.mp4' type="video/mp4"/>
         </video>
         <h5>This website powered by Decaf coffee.</h5>
-        <video autoPlay muted loop id="myVideo" style={myVideoStyle}>
+        <video autoPlay muted loop id="myVideo" className="clickable" onClick={()=>{this.setDisplay('Yosemite')}}style={myVideoStyle}>
           <source src='/DronePhoto/Yosemite.mp4' type="video/mp4"/>
         </video>
-        <video autoPlay muted loop id="myVideo" style={myVideoStyle}>
+        <video autoPlay muted loop id="myVideo" className="clickable" onClick={()=>{this.setDisplay('Maui')}} style={myVideoStyle}>
           <source src='/DronePhoto/Maui.mp4' type="video/mp4"/>
         </video>
-        <video autoPlay muted loop id="myVideo" style={myVideoStyle}>
+        <video autoPlay muted loop id="myVideo" className="clickable" onClick={()=>{this.setDisplay('SanFrancisco')}} style={myVideoStyle}>
           <source src='/DronePhoto/SanFrancisco.mp4' type="video/mp4"/>
         </video>
         </>
         :
-        null
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            {this.state.images[this.state.display].map((img)=>{
+              if (count===0) {
+                count++
+                return (
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src={img.file} alt="First slide"/>
+                  </div>
+                )
+              }
+              return (
+                <div class="carousel-item" key={key++}>
+                  <img class="d-block w-100" src={img.file} alt="Fourth slide"/>
+                </div>
+              )}
+            )}
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
         }
 
-        {this.state.images[this.state.display].map((img)=>{
-          return (
-          <div key={key++} style ={{margin: 'auto'}}>
-            <img src={img.file} height='700px'/>
-            <h2>{img.descr}</h2>
-          </div>
-          )}
-        )}
-
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="/DronePhoto/DJI_0273.JPG" alt="First slide"/>
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="/DronePhoto/DJI_0110.JPG" alt="Second slide"/>
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="/DronePhoto/DJI_0378.JPG" alt="Third slide"/>
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
 
         </div>
         </div>

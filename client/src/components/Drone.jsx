@@ -17,7 +17,9 @@ class Drone extends React.Component {
     this.state = {
       display: 'frontpage',
       frontpage: ['Yosemite', 'Maui', 'SanFrancisco'],
-      triplinks: ['Yosemite', 'Maui', 'Kauai', 'Big Island', 'SanFrancisco', 'Lands End', 'Crissy Field', 'Golden Gate Park', 'Marin', 'Monterey', 'Mavericks', 'Berkeley', 'Pinnacles', 'Boston', 'Tahoe', 'Joshua Tree', 'San Clemente', 'Los Angeles', 'Orange County'],
+      triplinks: ['Yosemite', 'Maui', 'SanFrancisco'
+      // 'Kauai', 'Big Island', 'SanFrancisco', 'Lands End', 'Crissy Field', 'Golden Gate Park', 'Marin', 'Monterey', 'Mavericks', 'Berkeley', 'Pinnacles', 'Boston', 'Tahoe', 'Joshua Tree', 'San Clemente', 'Los Angeles', 'Orange County'
+    ],
       images: {
         Yosemite: [{file: '/DronePhoto/DJI_0110.JPG', descr: "Yosemite, April 2021"},
         {file: '/DronePhoto/DJI_0120.JPG', descr: "Tenaya Lodge, April 2021"},],

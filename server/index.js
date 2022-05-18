@@ -1,10 +1,10 @@
 const express = require('express');
-const {db} = require('./Arangodb.js');
+// const {db} = require('./Arangodb.js');
 const app = express();
 const PORT = 3000 || process.env.PORT;
 
 app.use(express.static('client/dist'));
-db.useDatabase('sportradardb');
+// db.useDatabase('sportradardb');
 
 app.get('/nba/schedule', (req, res) => {
   //check Arango for info

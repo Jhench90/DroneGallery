@@ -17,7 +17,7 @@ This website began as a small project as part of the Hack Reactor Software Engin
 
 <a name='start'></a>
 ## Viewing
-This project may be viewed by visiting [jayandthesky.me](jayandthesky.me).
+This project may be viewed by visiting [jayandthesky.me](http://jayandthesky.me/).
 
 <a name='contact'></a>
 ## Contact

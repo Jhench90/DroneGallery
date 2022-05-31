@@ -12,7 +12,7 @@ class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      landingpage: "drone"
+      landingpage: "blogs"
     }
   };
   ups = (key, value) => {
@@ -42,8 +42,8 @@ class App extends React.Component {
         <div className="navbar">
           {/* <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'firstwebsite')}}>First Website</button>
           <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'leagues')}}>Leagues</button>
-          <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'productivity')}}>Productivity</button>
-          <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'blogs')}}>Blogs</button> */}
+          <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'productivity')}}>Productivity</button> */}
+          <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'blogs')}}>Blogs</button>
           <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'drone')}}>Drone</button>
           {/* <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'naturebreak')}}>Nature Break</button>
           <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'ukulele')}}>Ukulele</button> */}
@@ -62,7 +62,8 @@ class App extends React.Component {
           <div>{'blogs' == this.state.landingpage ? <Blogs /> : null}</div>
         </div>
         {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/2Yr3sKPi8mM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
-        <div style={{width: '1650px', textAlign: 'center'}}>© 2022 Jay.andthesky. Made possible with React.js, Bootstrap, ArangoDB, and DJI.</div>
+        <br></br>
+        <div style={{width: '100%', textAlign: 'center'}}>© 2022 Jay.andthesky. Made possible with React.js, Bootstrap, ArangoDB, and DJI.</div>
 
 
       </div>

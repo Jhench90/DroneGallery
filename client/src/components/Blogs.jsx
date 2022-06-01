@@ -19,7 +19,7 @@ class Blogs extends React.Component {
           9. The server is immediately reachable at your PCs IP address and port. ( http://192.168.0.24:3000/ )
         10. Finally, set up port forwarding on Godaddy using your personal computer IP address and port, so traffic arriving at your domain name is forwarded with masking to your IP address port. ( jayandthesky.me → http://192.168.0.24:3000/ ). Port forwarding can take 1 hour up to 48 hours to take effect.
 
-        Thats it! Your website is now up and running.      ` }
+        Thats it! Your website is now up and running!      ` }
     }
   };
   render() {

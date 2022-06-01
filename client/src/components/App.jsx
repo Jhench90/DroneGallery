@@ -7,6 +7,7 @@ import Productivity from './Productivity.jsx';
 import Ukulele from './Ukulele.jsx';
 import AboutMe from './AboutMe.jsx';
 import Blogs from './Blogs.jsx';
+import MusicDigs from './MusicDigs.jsx';
 
 class App extends React.Component {
   constructor(props){
@@ -45,6 +46,7 @@ class App extends React.Component {
           <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'productivity')}}>Productivity</button> */}
           <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'blogs')}}>Blogs</button>
           <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'drone')}}>Drone</button>
+          <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'musicdigs')}}>Music Digs</button>
           {/* <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'naturebreak')}}>Nature Break</button>
           <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'ukulele')}}>Ukulele</button> */}
           <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'aboutme')}}>About Me</button>
@@ -60,10 +62,11 @@ class App extends React.Component {
           <div>{'naturebreak' == this.state.landingpage ? <NatureBreak /> : null}</div>
           <div>{'aboutme' == this.state.landingpage ? <AboutMe /> : null}</div>
           <div>{'blogs' == this.state.landingpage ? <Blogs /> : null}</div>
+          <div>{'musicdigs' == this.state.landingpage ? <MusicDigs /> : null}</div>
         </div>
         {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/2Yr3sKPi8mM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
         <br></br>
-        <div style={{width: '100%', textAlign: 'center'}}>© 2022 Jay.andthesky. Made possible with React.js, Bootstrap, ArangoDB, and DJI.</div>
+        <div style={{width: '400px', margin: 'auto', textAlign: 'center'}}>© 2022 Jay.andthesky. Made possible with React.js, Bootstrap, ArangoDB, and DJI.</div>
 
 
       </div>

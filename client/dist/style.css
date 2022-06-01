@@ -5,6 +5,10 @@ h4:hover {
  text-decoration: underline;
  cursor: pointer;
 }
+.triplinks:hover {
+  text-decoration: underline;
+ cursor: pointer;
+}
 .clickable:hover{
   cursor: pointer;
 }

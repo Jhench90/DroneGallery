@@ -28,5 +28,5 @@ app.get('/nba/schedule', (req, res) => {
 })
 
 app.listen(PORT, () => {
-  console.log(`Server listening on port: ${PORT}`);
+  console.log(new Date().toString().slice(0, 24), `| Server listening on port: ${PORT}`);
 })

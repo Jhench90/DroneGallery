@@ -59,9 +59,13 @@ class Drone extends React.Component {
                 <h5 style={{ width: '1650px', textAlign: 'left' }}>This website is powered by Old Town instant coffee.</h5>
                 {this.state.frontpage.map((url) => {
                   return (
-                    <video autoPlay muted loop id="myVideo" key={key++} className="clickable" onClick={() => { this.setDisplay(`${url}`) }} style={myVideoStyle}>
-                      <source src={`/DronePhoto/${url}.mp4`} type="video/mp4" />
-                    </video>
+                    <div style={{bottomMargin: '20px'}}>
+                      {/* <video autoPlay muted loop id="myVideo" key={key++} className="clickable" onClick={() => { this.setDisplay(`${url}`) }} style={myVideoStyle}>
+                      <source src={`/DronePhoto/${url}.mp4`} type="video/mp4" loading="lazy" />
+                    </video> */}
+                      <img src={`/DronePhoto/${url}.png`} key={key++} className="clickable" onClick={() => { this.setDisplay(`${url}`) }} style={{ width: '100%' }} />
+                      <br></br>
+                    </div>
                   )
                 })}
               </>

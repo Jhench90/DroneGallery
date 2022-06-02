@@ -39,7 +39,9 @@ class App extends React.Component {
       border: '2px solid #555555'
     }
     return (
-      <div className="appcontainer">
+      <div className="appcontainer"
+      style={{backgroundColor: 'white'}}
+      >
         <div className="navbar">
           {/* <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'firstwebsite')}}>First Website</button>
           <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'leagues')}}>Leagues</button>
@@ -61,12 +63,14 @@ class App extends React.Component {
           <div>{'productivity' == this.state.landingpage ? <Productivity /> : null}</div>
           <div>{'naturebreak' == this.state.landingpage ? <NatureBreak /> : null}</div>
           <div>{'aboutme' == this.state.landingpage ? <AboutMe /> : null}</div>
-          <div>{'blogs' == this.state.landingpage ? <Blogs /> : null}</div>
-          <div>{'musicdigs' == this.state.landingpage ? <MusicDigs /> : null}</div>
+          <div>{'blogs' == this.state.landingpage ? <Blogs style={{backgroundColor: 'white'}}/> : null}</div>
+          {/* <div>{'musicdigs' == this.state.landingpage ? <MusicDigs /> : null}</div> */}
+          <MusicDigs />
         </div>
-        {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/2Yr3sKPi8mM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
         <br></br>
+        {'musicdigs' === this.state.landingpage ? null :
         <div style={{width: '400px', margin: 'auto', textAlign: 'center'}}>© 2022 Jay.andthesky. Made possible with React.js, Bootstrap, ArangoDB, and DJI.</div>
+        }
 
 
       </div>

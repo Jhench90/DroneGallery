@@ -27,7 +27,7 @@ class Blogs extends React.Component {
     let key = 0
     var splitted = this.state.post.content.split('\n')
     return (
-      <div>
+      <div >
         <div style={{ width: '20%', float: 'left', marginLeft: '5%', textDecoration: 'underline' }}>
           <div id="postlinks" style={{ float: 'left', width: '12%' }}>
             <div className="triplinks" style={{ textDecoration: 'underline' }} >Posts</div>
@@ -42,10 +42,12 @@ class Blogs extends React.Component {
             })}
           </div>
         </div>
-        <div style={{ width: '60%', float: 'left' }}>
-          <div style={{ overflow: 'hidden' }}>
-            <img style={{ marginTop: '-150px' }} width='1000px' src={this.state.post.banner} />
-            <h1 style={{ position: 'absolute', top: '25%', left: '34%', size: '20p', width: '50%', color: 'white'}}>How to deploy your personal website on your old laptop</h1>
+        <div style={{ width: '60%', float: 'left', backgroundColor: 'white'}}>
+          <div style={{ height: '400px', overflow: 'hidden' }}>
+            <img
+            // style={{ marginTop: '-150px' }}
+              src={this.state.post.banner} style={{width: '100%'}} />
+            <h1 style={{ position: 'absolute', top: '25%', left: '34%', size: '20p', width: '40%', color: 'white', textAlign: 'center'}}>How to deploy your personal website on your old laptop</h1>
           </div>
           <div>
             <div style={{textAlign: 'center'}}>

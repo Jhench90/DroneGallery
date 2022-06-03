@@ -10,15 +10,15 @@ class Drone extends React.Component {
         // 'Kauai', 'Big Island', 'SanFrancisco', 'Lands End', 'Crissy Field', 'Golden Gate Park', 'Marin', 'Monterey', 'Mavericks', 'Berkeley', 'Pinnacles', 'Boston', 'Tahoe', 'Joshua Tree', 'San Clemente', 'Los Angeles', 'Orange County'
       ],
       images: {
-        Yosemite: [{ file: '/DronePhoto/DJI_0110.JPG', descr: "Yosemite, April 2021" },
-        { file: '/DronePhoto/DJI_0120.JPG', descr: "Tenaya Lodge, April 2021" },],
-        Maui: [{ file: '/DronePhoto/DJI_0223.JPG', descr: "ʻĪao Valley State Monument, Maui, October 2021" },
-        { file: '/DronePhoto/DJI_0273.JPG', descr: "Hakena Beach, Maui, October 2021" },
-        { file: '/DronePhoto/DJI_0357.JPG', descr: "Pīpīwai Trail, Maui, October 2021" },
-        { file: '/DronePhoto/DJI_0378.JPG', descr: "Wailua, Kauai, October 2021" },],
-        'SanFrancisco': [{ file: '/DronePhoto/DJI_0420.JPG', descr: "Embarcadero, SF, December 2021" },
-        { file: '/DronePhoto/DJI_0438.JPG', descr: "SalesForce Park, SF, December 2021" },
-        { file: '/DronePhoto/DJI_0444.JPG', descr: "Skyline, SF, December 2021" }]
+        Yosemite: [{ file: '/DronePhoto/DJI_0110.webp', descr: "Yosemite, April 2021" },
+        { file: '/DronePhoto/DJI_0120.webp', descr: "Tenaya Lodge, April 2021" },],
+        Maui: [{ file: '/DronePhoto/DJI_0223.webp', descr: "ʻĪao Valley State Monument, Maui, October 2021" },
+        { file: '/DronePhoto/DJI_0273.webp', descr: "Hakena Beach, Maui, October 2021" },
+        { file: '/DronePhoto/DJI_0357.webp', descr: "Pīpīwai Trail, Maui, October 2021" },
+        { file: '/DronePhoto/DJI_0378.webp', descr: "Wailua, Kauai, October 2021" },],
+        'SanFrancisco': [{ file: '/DronePhoto/DJI_0420.webp', descr: "Embarcadero, SF, December 2021" },
+        { file: '/DronePhoto/DJI_0438.webp', descr: "SalesForce Park, SF, December 2021" },
+        { file: '/DronePhoto/DJI_0444.webp', descr: "Skyline, SF, December 2021" }]
       }
     }
   };
@@ -63,7 +63,7 @@ class Drone extends React.Component {
                       {/* <video autoPlay muted loop id="myVideo" key={key++} className="clickable" onClick={() => { this.setDisplay(`${url}`) }} style={myVideoStyle}>
                       <source src={`/DronePhoto/${url}.mp4`} type="video/mp4" loading="lazy" />
                     </video> */}
-                      <img src={`/DronePhoto/${url}.png`} key={key++} className="clickable" onClick={() => { this.setDisplay(`${url}`) }} style={{ width: '100%' }} />
+                      <img src={`/DronePhoto/${url}.webp`} key={key++} className="clickable" onClick={() => { this.setDisplay(`${url}`) }} style={{ width: '100%' }} />
                       <br></br>
                     </div>
                   )

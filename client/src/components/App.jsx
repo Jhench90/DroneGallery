@@ -40,7 +40,7 @@ class App extends React.Component {
     }
     return (
       <div className="appcontainer"
-      style={{backgroundColor: 'white'}}
+      style={{backgroundColor: 'white', marginBottom: '50px'}}
       >
         <div className="navbar">
           {/* <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'firstwebsite')}}>First Website</button>
@@ -69,7 +69,9 @@ class App extends React.Component {
         </div>
         <br></br>
         {'musicdigs' === this.state.landingpage ? null :
-        <div style={{width: '400px', margin: 'auto', textAlign: 'center'}}>© 2022 Jay.andthesky. Made possible with React.js, Bootstrap, ArangoDB, and DJI.</div>
+        <div style={{width: '400px',
+        margin: 'auto',
+         textAlign: 'center', backgroundColor: 'white', paddingBottom: '100px'}}>© 2022 Jay.andthesky. Made possible with React.js, Bootstrap, ArangoDB, and DJI.</div>
         }
 
 

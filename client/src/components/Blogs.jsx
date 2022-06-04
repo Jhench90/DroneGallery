@@ -43,12 +43,32 @@ class Blogs extends React.Component {
           </div>
         </div>
         <div style={{ width: '60%', float: 'left', backgroundColor: 'white' }}>
-          <div style={{ height: '400px', overflow: 'hidden' }}>
+          {/* <div style={{ height: '400px', overflow: 'hidden' }}>
             <img
-              // style={{ marginTop: '-150px' }}
               src={this.state.post.banner} style={{ width: '100%' }} />
-            <h1 style={{ position: 'absolute', top: '25%', left: '34%', size: '20p', width: '40%', color: 'white', textAlign: 'center' }}>How to deploy your personal website on your old laptop</h1>
+            <h1 style={{
+              position: 'relative',
+              // top: '25%',
+              // left: '34%',
+              size: '20p',
+              // width: '40%',
+              color: 'white',
+              textAlign: 'center' }}>How to deploy your personal website on your old laptop</h1>
+          </div> */}
+
+          <div style={{position: 'relative', textAlign: 'center', color: 'white'}}>
+            <img
+              src={this.state.post.banner} style={{ width: '100%' }} />
+            <h1 style={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              size: '20p',
+              transform: 'translate(-50%, -50%)',
+              // width: '40%',
+              color: 'white', }}>How to deploy your personal website on your old laptop</h1>
           </div>
+
           <div>
             <div style={{ textAlign: 'center' }}>
               Author: Jay
@@ -87,7 +107,7 @@ class Blogs extends React.Component {
                 Domain name --> (port-forwarded) --> Router public IPv4 --> (port-forwarded) --> Server computer private IPv4.
                 </li>
                 <li>
-                   8. To determine your server computers IP, open up cmd in start menu, and enter the command >insert, the >insert is your computer server IP address. Alternatively, find the IP through checking Wifi connection settings. https://support.microsoft.com/en-us/windows/find-your-ip-address-in-windows-f21a9bbc-c582-55cd-35e0-73431160a1b9
+                   8. Determine your server computers IP. Open up cmd in start menu, and enter 'ipcofig'. IPv4 is your server computers private address. Default gateway is your routers private address.
                 </li>
                 <li>
                   9. Edit inbound rules in Firewall to allow access through the port your server listens at ( 3000 in most cases ).
@@ -96,18 +116,20 @@ class Blogs extends React.Component {
                   10. The server is immediately reachable on your WiFi at your IP address + port. ( http://192.168.0.24:3000/ )
                 </li>
                 <li>
-                  11. To open up a port on your router, log in to your routers GUI. How to access your router GUI is normally printed somewhere on the router. Otherwise, visiting 192.168.0.0 or 192.168.0.1 may allow you to access the log in. >insert. Create a new Port-forward to recieve connections on port 3000 and forward traffic to your server computer IP + port.
+                  11. Open up a port on your router. Log in to your routers GUI (instructions normally printed on the router). Otherwise, visiting the Default Gateway or 192.168.0.1 may allow you to connect to your router. Create a Port-forward to recieve connections on port 3000 and forward to your server computer address + port.
                 </li>
                 <li>
-                  12. Finally, set up port forwarding with masking on Godaddy in your DNS settings to send traffic to your router IP + port. Visit https://www.whatismyip.com/ while connected to your Wifi to determine your routers public IP address. ( jayandthesky.me → http://67.161.47.190:3000/ ). Godaddy Port forwarding can take 1 hour up to 48 hours to take effect. Your router Port Forward should take effect immediately.
+                  12. Finally, set up a Port-forward with masking on Godaddy in your DNS settings to send traffic to your router public address + port. Visit https://www.whatismyip.com/ while connected to your Wifi to determine your routers public IP address. ( jayandthesky.me → http://67.161.47.190:3000/ ). Godaddy Port forwarding can take 1 hour up to 48 hours to take effect. Router Port Forward should take effect immediately.
                 </li>
               </ul>
               <p>
                 Thats it! Your website is now up and running!
               </p>
               <p>Additional Notes:</p>
-              <p>Based on this design, your website can be accesssed several ways. While on the WiFi network, you may connect to your website through the server computer IP, router IP, or domain name. While off the WiFi network, you may connect to your website through the router IP or domain name. </p>
-              <p>Your server computer and router have public and private IP addresses which should not be mixed up. The public address is reachable by users not connected to your local network. The private IP address is created for each device by your router in numerical order, with the router commonly starting at 192.168.0.0 or 192.168.0.1, and following devices in order (192.168.0.2, 192.168.0.3, 192.168.0.4, etc). All your devices, laptops, phones, Google Home, are all assigned a private IP address. A user not connected to your WiFi/local network is unable to reach your server computer via the private/local IP address.</p>
+              <p>While your routers private IP address is used to access the router GUI, the routers public IP address should be used in the Port-forward. </p>
+              <p>Your website can be accesssed several ways. While on the WiFi network, you may connect to your website through the server computer IP, router IP, or domain name. While off the WiFi network, you may connect to your website through the router IP or domain name. </p>
+              <p>Your server computer and router have public and private IP addresses which should not be mixed up. The private IP address is created for each device by your router in numerical order, with the router commonly starting at 192.168.0.0 or 192.168.0.1, and following devices in order (192.168.0.2, 192.168.0.3, 192.168.0.4, etc). All your devices, laptops, phones, Google Home, are all assigned a private IP address. A user not connected to your WiFi/local network is unable to reach your server computer via the private/local IP address.</p>
+              <p>Static IPs would benefit this walkthrough. If the server computer's private IP is ever reassigned by the router, you will need to use the router GUI to edit the Port-forward setting.</p>
               <div>
                 Tags: Deployment, Windows, IP, DNS
               </div>

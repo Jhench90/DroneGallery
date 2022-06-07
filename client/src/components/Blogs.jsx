@@ -43,19 +43,6 @@ class Blogs extends React.Component {
           </div>
         </div>
         <div style={{ width: '60%', float: 'left', backgroundColor: 'white' }}>
-          {/* <div style={{ height: '400px', overflow: 'hidden' }}>
-            <img
-              src={this.state.post.banner} style={{ width: '100%' }} />
-            <h1 style={{
-              position: 'relative',
-              // top: '25%',
-              // left: '34%',
-              size: '20p',
-              // width: '40%',
-              color: 'white',
-              textAlign: 'center' }}>How to deploy your personal website on your old laptop</h1>
-          </div> */}
-
           <div style={{position: 'relative', textAlign: 'center', color: 'white'}}>
             <img
               src={this.state.post.banner} style={{ width: '100%' }} />

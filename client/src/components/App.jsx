@@ -8,6 +8,7 @@ import Ukulele from './Ukulele.jsx';
 import AboutMe from './AboutMe.jsx';
 import Blogs from './Blogs.jsx';
 import MusicDigs from './MusicDigs.jsx';
+import Experimental from './Experimental.jsx';
 
 class App extends React.Component {
   constructor(props){
@@ -51,6 +52,7 @@ class App extends React.Component {
           <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'musicdigs')}}>Music Digs</button>
           {/* <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'naturebreak')}}>Nature Break</button>
           <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'ukulele')}}>Ukulele</button> */}
+          <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'experimental')}}>Experimental</button>
           <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'aboutme')}}>About Me</button>
         </div>
         <div className="content">
@@ -65,6 +67,7 @@ class App extends React.Component {
           <div>{'aboutme' == this.state.landingpage ? <AboutMe /> : null}</div>
           <div>{'blogs' == this.state.landingpage ? <Blogs style={{backgroundColor: 'white'}}/> : null}</div>
           {/* <div>{'musicdigs' == this.state.landingpage ? <MusicDigs /> : null}</div> */}
+          <div>{'experimental' == this.state.landingpage ? <Experimental /> : null}</div>
           <MusicDigs />
         </div>
         <br></br>

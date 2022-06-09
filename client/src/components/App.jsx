@@ -43,10 +43,23 @@ class App extends React.Component {
       <div className="appcontainer"
       style={{backgroundColor: 'white', marginBottom: '50px'}}
       >
+
+        <div style={{position: 'relative', textAlign: 'center', color: 'white'}}>
+            <img
+              src="DronePhoto/jayandtheskybanner.webp" style={{ width: '100%' }} />
+            <h1 style={{
+              position: 'absolute',
+              top: '25%',
+              left: '15%',
+              size: '20p',
+              transform: 'translate(-50%, -50%)',
+              width: '40%',
+              color: '#white', }}>Jay and the Sky</h1>
+          </div>
         <div className="navbar">
           {/* <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'firstwebsite')}}>First Website</button>
-          <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'leagues')}}>Leagues</button>
-          <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'productivity')}}>Productivity</button> */}
+          <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'leagues')}}>Leagues</button> */}
+          {/* <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'productivity')}}>Productivity</button> */}
           <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'blogs')}}>Blogs</button>
           <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'drone')}}>Drone</button>
           <button style={btnStyle} onClick={(e)=>{this.ups('landingpage', 'musicdigs')}}>Music Digs</button>
@@ -66,7 +79,6 @@ class App extends React.Component {
           <div>{'naturebreak' == this.state.landingpage ? <NatureBreak /> : null}</div>
           <div>{'aboutme' == this.state.landingpage ? <AboutMe /> : null}</div>
           <div>{'blogs' == this.state.landingpage ? <Blogs style={{backgroundColor: 'white'}}/> : null}</div>
-          {/* <div>{'musicdigs' == this.state.landingpage ? <MusicDigs /> : null}</div> */}
           <div>{'experimental' == this.state.landingpage ? <Experimental /> : null}</div>
           <MusicDigs />
         </div>

@@ -6,9 +6,9 @@ class Experimental extends React.Component {
   };
   render() {
     return (
-      <div>Experimental here
+      <div>Experimental
 
-        <iframe src="http://67.161.47.190:3000"></iframe>
+        <iframe width='1000px' height='800px' src="http://67.161.47.190:3000"></iframe>
       </div>
     )
   }

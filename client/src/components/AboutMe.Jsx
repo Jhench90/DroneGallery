@@ -7,7 +7,7 @@ class AboutMe extends React.Component {
   render() {
     return (
       <div style={{ position: 'absolute', left: '15%', backgroundColor: 'white' }}>
-        <div id="AboutMeProfilePic" style={{ width: '400px', margin: '10px', float: 'left' }}>
+        <div id="AboutMeProfilePic" style={{ width: '400px', margin: '10px', float: 'left' }} >
           <img src='/DronePhoto/AboutMe.webp' width="100%" style={{ borderRadius: '50%' }} />
         </div>
         <div id="AboutMeContent" style={{ width: '400px', float: 'left', margin: '10px' }}>
@@ -16,7 +16,12 @@ class AboutMe extends React.Component {
         </div>
         <div style={{ float: 'left', margin: '10px' }}>
           <h1>Connect</h1>
-          <img src='DronePhoto/IG.png' width='400px' alt="First slide" />
+          <img src='DronePhoto/IG.png' className="clickable" width='400px' alt="First slide" onClick={() => {
+            window.open(
+              "https://www.instagram.com/jay.andthesky/", "_blank")
+          }
+          }
+          />
         </div>
         <div>
         </div>

@@ -19,7 +19,7 @@ db.listDatabases().then((names) => {
   });
 
 //use database
-db.useDatabase('sportradardb')
+db.useDatabase('blogs')
 
 module.exports = {
   db: db

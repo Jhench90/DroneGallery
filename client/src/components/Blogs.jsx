@@ -1,10 +1,14 @@
 import React from 'react';
+import axios from 'axios';
 
 class Blogs extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       landingpage: 'blogview',
+      missingfield: false,
+      incorrectpassword: false,
+      banner: 'forest',
       posts: ['Website Deployment - 5/18/22'],
       post: {
         banner: '/DronePhoto/DJI_0120_banner.webp', shorttitle: 'website deployment', title: 'How to deploy your personal website on your old laptop', author: 'Jay', date: '5/18/2022', content: `Deploying a server on your old laptop offers advantages and disadvantages to deploying over a standard cloud based service like AWS or Azure. One advantage is you will not be charged for memory usage or computing time. A disadvantage is your download and upload speeds can be limited by the plan you are signed up for with your ISP. The laptop would be running at all times and the electricity bill can increase. In either case, if you wish to register a domain name, you would still need to pay a yearly fee and end up paying some money in the end.
@@ -25,14 +29,24 @@ class Blogs extends React.Component {
     }
   };
   setDisplay = (view) => {
-    console.log('exec')
     this.setState({
       landingpage: `${view}`
     })
   }
+  toggle = (string) => {
+    if (this.state[string]) {
+      this.setState({[string]: false})
+    } else {
+      this.setState({[string]: true})
+    }
+  }
+  changeState = (key, value) => {
+    this.setState({[key]: value})
+  }
   render() {
     let key = 0
     var splitted = this.state.post.content.split('\n')
+    let t = this
     return (
       <div>
         {this.state.landingpage === 'blogview'
@@ -142,16 +156,24 @@ class Blogs extends React.Component {
           ?
           <div style={{ marginLeft: '200px' }}>
             <div>Title</div>
-            <input></input>
+            <input onChange={(e)=>{
+              this.changeState('title', e.target.value)
+            }}></input>
 
             <div>Short Title</div>
-            <input></input>
+            <input onChange={(e)=>{
+              this.changeState('shorttitle', e.target.value)
+            }}></input>
 
             <div>Author</div>
-            <input></input>
+            <input onChange={(e)=>{
+              this.changeState('author', e.target.value)
+            }}></input>
 
             <div>Banner</div>
-            <select name="cars" id="cars">
+            <select  onChange={(e)=>{
+              this.changeState('banner', e.target.value)
+            }}>
               <option value="forest">forest</option>
               <option value="desert">desert</option>
               <option value="ferriswheel">ferriswheel</option>
@@ -159,14 +181,52 @@ class Blogs extends React.Component {
             </select>
 
             <div>Content</div>
-            <textarea rows="25" cols="100"></textarea>
+            <textarea  onChange={(e)=>{
+              this.changeState('content', e.target.value)
+            }}rows="25" cols="100"></textarea>
             <form></form>
 
             <div>Password</div>
-            <input></input>
+            <input onChange={(e)=>{
+              this.changeState('password', e.target.value)
+              this.changeState('time', new Date())
+            }}></input>
             <br></br>
             <button onClick={() => { this.setDisplay('blogview') }}>Back</button>
-            <button>Submit</button>
+            <button onClick={()=>{
+              let s = this.state
+              if (s.banner, s.title, s.shorttitle, s.author, s.content, s.password === undefined) {
+                this.toggle('missingfield')
+                return
+              }
+              if (s.banner, s.title, s.shorttitle, s.author, s.content, s.password === '') {
+                this.toggle('missingfield')
+                return
+              }
+              if (this.state.missingfield) {
+                this.toggle('missingfield')
+              }
+              axios.post('/blogs', {
+                title: s.title,
+                shorttitle: s.shorttitle,
+                author: s.author,
+                banner: s.banner,
+                time: s.time,
+                password: s.password,
+                content: s.content
+              })
+              .then(function (response) {
+                console.log(response)
+                if (response.data === 'Incorrect password') {
+                  t.toggle('incorrectpassword')
+                }
+              })
+              .catch(function (error) {
+                console.log(error)
+              })
+            }}>Submit</button>
+            {this.state.missingfield ? <div>There is a missing field</div> : null}
+            {this.state.incorrectpassword ? <div>Password incorrect</div> : null}
           </div>
           :
           null

@@ -44,16 +44,17 @@ function AppV2() {
             setPage('blogs')
             setHamburger(false)
           }}>Blog</div>
-          <div className="hamburgerMenuButton" onClick={(e) => {
-            setPage('softwareEngineering')
-            setHamburger(false)
-          }}>Software Engineering</div>
+          
           <div className="hamburgerMenuButton" onClick={(e) => {
             setPage('socialMedia')
             setHamburger(false)
           }}>Social Media</div>
           <div className="hamburgerMenuButton" onClick={(e) => {
-            window.open('DronePhoto/CV_2022_06_01_Joel_Hench.pdf');
+            setPage('softwareEngineering')
+            setHamburger(false)
+          }}>Software Engineering</div>
+          <div className="hamburgerMenuButton" onClick={(e) => {
+            window.open('CV_2022_06_01_Joel_Hench.pdf');
           }}>Resume</div>
           <div className="hamburgerMenuButton" onClick={(e) => {
             setPage('aboutme')

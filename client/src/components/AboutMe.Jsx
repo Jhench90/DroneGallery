@@ -1,33 +1,25 @@
-import React from 'react';
+import React, {useState, useEFfect} from 'react';
 
-class AboutMe extends React.Component {
-  constructor(props) {
-    super(props);
-  };
-  render() {
+function AboutMe () {
+
     return (
-      <div style={{ position: 'absolute', left: '15%', backgroundColor: 'white' }}>
-        <div id="AboutMeProfilePic" style={{ width: '400px', margin: '10px', float: 'left' }} >
-          <img src='/DronePhoto/AboutMe.webp' width="100%" style={{ borderRadius: '50%' }} />
+        <>
+        <div>
+        <div id="AboutMeProfilePic" >
+          <img src='/DronePhoto/AboutMe.webp' height="200px" />
         </div>
-        <div id="AboutMeContent" style={{ width: '400px', float: 'left', margin: '10px' }}>
+        <div id="AboutMeContent" >
           <h1>About Me</h1>
-          Hey, Im Jay. Its nice to meet you. Im a California native currently living near San Francisco. I built this website with React.js as a passion project to show some of the things I am interested in. As a web developer, I have experience building full stack applications and particularly enjoy working with database management systems (this website is powered by ArangoDB). I also own several drones and fly them anywhere and everywhere I can, resulting in some breathtaking photographs and videos which I am proud of. Anything else I should say? I'm a Tottenham Hotspurs fan, Go Coys! Id like to do something meaningful in this world, and thats something I still need to figure out. Drop me a message if you'd like to connect. I'd love to get coffee sometime.
+          Im Jay. Im a California native living near San Francisco. I built this website with React.js as a passion project to show some of the things I am interested in. As a web developer, I have experience building full stack applications and work with both front end design as well as server systems and database management. I  own several drones and fly them anywhere and everywhere I can, its my main artistic and creative outlet. Anything else I should say? I'm a Tottenham Hotspurs fan, Go Coys! Id like to do something meaningful in this world, and thats something I still need to figure out. Drop me a message if you'd like to connect. I'd love to get coffee sometime.
         </div>
-        <div style={{ float: 'left', margin: '10px' }}>
-          <h1>Connect</h1>
-          <img src='DronePhoto/IG.png' className="clickable" width='400px' alt="First slide" onClick={() => {
-            window.open(
-              "https://www.instagram.com/jay.andthesky/", "_blank")
-          }
-          }
-          />
+        <div >
+          
         </div>
         <div>
         </div>
       </div>
+        </>
     )
-  }
 }
 
 export default AboutMe;

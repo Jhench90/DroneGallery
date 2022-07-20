@@ -8,16 +8,16 @@ function Home({setPage}) {
             <div className="logo">
                 <div className="title">Jay and the Sky</div>
                 <div className="homeButton" onClick={(e)=>{
-
+                    setPage('softwareEngineering')
                 }}>Software Engineering</div>
                 <br></br>
                 <div className="homeButton" onClick={(e)=>{
-
+                    setPage('socialMedia')
                 }}>Social Media</div>
                 <br></br>
                 <div className="homeButton" onClick={(e)=>{
-                    setPage('aboutme')
-                }}>About Me</div>
+                    window.open('DronePhoto/CV_2022_06_01_Joel_Hench.pdf');
+                }}>Resume</div>
             </div>
         </div>
     )

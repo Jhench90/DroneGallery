@@ -5,18 +5,20 @@ body {
   overflow-y: hidden;
 }
 .hamburgerMenu {
-  position: absolute;
+  text-align: center;
+  position: fixed;
   height: 100%;
   width: 300px;
   z-index: 5;
   background-color: grey;
-  /* opacity: 80%; */
+  opacity: 80%;
   right: 0px;
   top: 0px;
 }
 .hamburgerMenuButton {
+  font-size: 1.5rem;
   color: white;
-  border: solid white;
+  /* font-weight: bold; */
   margin-left: 20px;
   margin-top: 20px;
   margin-right: 20px;

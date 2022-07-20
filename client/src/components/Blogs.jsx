@@ -48,7 +48,7 @@ class Blogs extends React.Component {
     var splitted = this.state.post.content.split('\n')
     let t = this
     return (
-      <div>
+      <div style={{position: 'absolute', top: '30px'}}>
         {this.state.landingpage === 'blogview'
           ?
           <div >

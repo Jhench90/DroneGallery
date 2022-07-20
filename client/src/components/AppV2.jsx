@@ -4,25 +4,22 @@ import AboutMe from './AboutMe.jsx';
 import Blogs from './Blogs.jsx';
 import Drone from './Drone.jsx';
 import Home from './Home.jsx';
+import SocialMedia from './SocialMedia.jsx';
 
 function AppV2() {
   const [page, setPage] = useState('home')
   const [hamburger, setHamburger] = useState(false)
   return (
     <div className="appContainer">
-      {/* <div className="navbar">
-        <button onClick={(e) => { setPage('blogs') }}>Blogs</button>
-        <button onClick={(e) => { setPage('drone') }}>Drone</button>
-        <button onClick={(e) => { setPage('aboutme') }}>About Me</button>
-      </div> */}
       <div className="content">
         <div>{'home' == page ? <Home setPage={setPage} /> : null}</div>
         <div>{'drone' == page ? <Drone setPage={setPage} /> : null}</div>
         <div>{'aboutme' == page ? <AboutMe setPage={setPage} /> : null}</div>
         <div>{'blogs' == page ? <Blogs setPage={setPage} /> : null}</div>
+        <div>{'socialMedia' == page ? <SocialMedia setPage={setPage} /> : null}</div>
       </div>
       <br></br>
-      <div className="copyrightApp" style={{ margin: 'auto' }}>© 2022 Jay.andthesky. Made possible with React.js, Bootstrap, ArangoDB, and DJI.</div>
+      {/* <div className="copyrightApp" style={{ margin: 'auto' }}>© 2022 Jay.andthesky. Made possible with React.js, ArangoDB, and DJI.</div> */}
       <img src="DronePhoto/Hamburger_icon.svg" className="hamburgerIcon" onClick={(e) => {
         if (hamburger) {
           setHamburger(false)
@@ -36,19 +33,31 @@ function AppV2() {
             setHamburger(false)
           }}>X</div>
           <div className="hamburgerMenuButton" onClick={(e) => {
-              setPage('home')
+            setPage('home')
+            setHamburger(false)
           }}>Home</div>
           <div className="hamburgerMenuButton" onClick={(e) => {
-            
+            setPage('drone')
+            setHamburger(false)
+          }}>Aerial Drone</div>
+          <div className="hamburgerMenuButton" onClick={(e) => {
+            setPage('blogs')
+            setHamburger(false)
+          }}>Blog</div>
+          <div className="hamburgerMenuButton" onClick={(e) => {
+            setPage('softwareEngineering')
+            setHamburger(false)
           }}>Software Engineering</div>
           <div className="hamburgerMenuButton" onClick={(e) => {
-setPage()
-          }}>Drone</div>
-          <div className="hamburgerMenuButton" onClick={(e) => {
-setPage()
+            setPage('socialMedia')
+            setHamburger(false)
           }}>Social Media</div>
           <div className="hamburgerMenuButton" onClick={(e) => {
+            window.open('DronePhoto/CV_2022_06_01_Joel_Hench.pdf');
+          }}>Resume</div>
+          <div className="hamburgerMenuButton" onClick={(e) => {
             setPage('aboutme')
+            setHamburger(false)
           }}>About Me</div>
         </div>
         : null}

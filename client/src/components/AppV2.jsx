@@ -4,19 +4,21 @@ import AboutMe from './AboutMe.jsx';
 import Blogs from './Blogs.jsx';
 import Drone from './Drone.jsx';
 import Home from './Home.jsx';
+import Productivity from './Productivity.jsx';
 import SocialMedia from './SocialMedia.jsx';
 
 function AppV2() {
   const [page, setPage] = useState('home')
   const [hamburger, setHamburger] = useState(false)
   return (
-    <div className="appContainer">
+    <div className="appContainer" id="appContainer">
       <div className="content">
         <div>{'home' == page ? <Home setPage={setPage} /> : null}</div>
         <div>{'drone' == page ? <Drone setPage={setPage} /> : null}</div>
-        <div>{'aboutme' == page ? <AboutMe setPage={setPage} /> : null}</div>
+        <div>{'aboutMe' == page ? <AboutMe setPage={setPage} /> : null}</div>
         <div>{'blogs' == page ? <Blogs setPage={setPage} /> : null}</div>
         <div>{'socialMedia' == page ? <SocialMedia setPage={setPage} /> : null}</div>
+        <div>{'productivity' == page ? <Productivity setPage={setPage} /> : null}</div>
       </div>
       <br></br>
       {/* <div className="copyrightApp" style={{ margin: 'auto' }}>© 2022 Jay.andthesky. Made possible with React.js, ArangoDB, and DJI.</div> */}
@@ -44,22 +46,22 @@ function AppV2() {
             setPage('blogs')
             setHamburger(false)
           }}>Blog</div>
+          <div className="hamburgerMenuButton" onClick={(e) => {
+            setPage('productivity')
+            setHamburger(false)
+          }}>Productivity</div>
           
           <div className="hamburgerMenuButton" onClick={(e) => {
             setPage('socialMedia')
             setHamburger(false)
           }}>Social Media</div>
           <div className="hamburgerMenuButton" onClick={(e) => {
-            setPage('softwareEngineering')
+            setPage('aboutMe')
             setHamburger(false)
           }}>Software Engineering</div>
-          <div className="hamburgerMenuButton" onClick={(e) => {
+          {/* <div className="hamburgerMenuButton" onClick={(e) => {
             window.open('CV_2022_06_01_Joel_Hench.pdf');
-          }}>Resume</div>
-          <div className="hamburgerMenuButton" onClick={(e) => {
-            setPage('aboutme')
-            setHamburger(false)
-          }}>About Me</div>
+          }}>Resume</div> */}
         </div>
         : null}
     </div>

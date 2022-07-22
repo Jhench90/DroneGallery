@@ -3,6 +3,9 @@ body {
 }
 .appContainer {
   overflow-y: hidden;
+  /* background-image: url("https://jooinn.com/images/metal-pattern-background-3.jpg"); */
+  /* background: rgb(157,152,255);
+background: linear-gradient(90deg, rgba(157,152,255,1) 0%, rgba(116,232,255,1) 88%); */
 }
 .hamburgerMenu {
   text-align: center;

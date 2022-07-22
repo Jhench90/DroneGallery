@@ -1,14 +1,14 @@
 import React from 'react';
-import Drone from './Drone.jsx';
-import FirstWebsite from './FirstWebsite.jsx';
-import Leagues from './Leagues.jsx';
-import NatureBreak from './NatureBreak.jsx';
-import Productivity from './Productivity.jsx';
-import Ukulele from './Ukulele.jsx';
-import AboutMe from './AboutMe.jsx';
-import Blogs from './Blogs.jsx';
-import MusicDigs from './MusicDigs.jsx';
-import Experimental from './Experimental.jsx';
+// import Drone from './Drone.jsx';
+// import FirstWebsite from './FirstWebsite.jsx';
+// import Leagues from './Leagues.jsx';
+// import NatureBreak from './NatureBreak.jsx';
+// import Productivity from './Productivity.jsx';
+// import Ukulele from './Ukulele.jsx';
+// import AboutMe from './AboutMe.jsx';
+// import Blogs from './Blogs.jsx';
+// import MusicDigs from './MusicDigs.jsx';
+// import Experimental from './Experimental.jsx';
 
 class App extends React.Component {
   constructor(props){

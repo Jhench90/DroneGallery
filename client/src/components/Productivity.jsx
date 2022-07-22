@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { useState, useEFfect } from 'react';
+import Timer from './Timer.jsx';
 
-class ProductivityApp extends React.Component {
-  constructor(props){
-    super(props);
-  };
-  render () {
+function Productivity() {
     return (
-      <div>ProductivityApp here</div>
+        <>
+            <div className="flexContainer">
+                <Timer />
+            </div>
+        </>
     )
-  }
 }
 
-export default ProductivityApp;
+export default Productivity;

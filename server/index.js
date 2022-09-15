@@ -1,11 +1,69 @@
 const express = require('express');
-// const {db} = require('./Arangodb.js');
+const {db} = require('./Arangodb.js');
+const aqlQuery = require('arangojs').aqlQuery
 const app = express();
 const PORT = 3000 || process.env.PORT;
 
+var bodyParser = require('body-parser');
+
 app.use(express.static('client/dist'));
-app.use(express.json())
-// db.useDatabase('sportradardb');
+app.use(bodyParser.json())
+
+app.get('/flashcards', (req, res)=>{
+  let collection = db.collection('flashcards');
+
+  //code to add new document
+  // let collection = db.collection('flashcards');
+  // let doc = {
+  //   _key: 'secondDocument',
+  //   a: 'foo',
+  //   b: 'bar'
+  // }
+  // collection.save(doc).then(
+  //   meta => console.log('Document saved: ', meta._rev)
+  // )
+
+  // retrieve entire collection
+  collection.all().then(
+    cursor => cursor.map(doc => doc)
+  ).then(
+    keys => res.send(keys)
+  )
+})
+
+app.patch('/flashcards', (req, res)=>{
+  console.log(req.body)
+  let newDocument = {
+    word: req.body.word,
+    definition: req.body.definition,
+    studyCount: req.body.studyCount
+  }
+  console.log(`FOR doc in flashcards Replace "${req.body._key}" with {word: ${req.body.word},
+  definition: ${req.body.definition}, studyCount: ${req.body.studyCount}} in flashcards`)
+
+  db.query(`FOR doc in flashcards Replace "${req.body._key}" with {word: "${req.body.word}",
+    definition: "${req.body.definition}", studyCount: ${req.body.studyCount}} in flashcards`)
+    .then(()=>{
+      let collection = db.collection('flashcards');
+      collection.all().then(
+        cursor => cursor.map(doc => doc)
+      ).then(
+        keys => res.send(keys)
+      )
+    })
+})
+
+app.post('/flashcards', (req, res)=>{
+  console.log(req.body)
+  //code to add new document
+  let collection = db.collection('flashcards');
+  let doc = {
+    ...req.body
+  }
+  collection.save(doc).then(
+    meta => console.log('Document saved: ', meta._rev)
+  )
+})
 
 // app.get('/nba/schedule', (req, res) => {
 //   //check Arango for info

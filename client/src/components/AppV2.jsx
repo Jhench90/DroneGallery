@@ -5,7 +5,7 @@ import Blogs from './Blogs.jsx';
 import BlogsV2 from './BlogsV2.jsx';
 import Drone from './Drone.jsx';
 import Home from './Home.jsx';
-import Productivity from './Productivity.jsx';
+import Productivity from './productivity/Productivity.jsx';
 import SocialMedia from './SocialMedia.jsx';
 
 function AppV2() {

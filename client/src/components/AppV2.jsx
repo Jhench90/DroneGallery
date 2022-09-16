@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 
 import AboutMe from './AboutMe.jsx';
 import Blogs from './Blogs.jsx';
+import BlogsV2 from './BlogsV2.jsx';
 import Drone from './Drone.jsx';
 import Home from './Home.jsx';
-import Productivity from './Productivity.jsx';
+import Productivity from './productivity/Productivity.jsx';
 import SocialMedia from './SocialMedia.jsx';
 
 function AppV2() {
@@ -16,7 +17,7 @@ function AppV2() {
         <div>{'home' == page ? <Home setPage={setPage} /> : null}</div>
         <div>{'drone' == page ? <Drone setPage={setPage} /> : null}</div>
         <div>{'aboutMe' == page ? <AboutMe setPage={setPage} /> : null}</div>
-        <div>{'blogs' == page ? <Blogs setPage={setPage} /> : null}</div>
+        <div>{'blogs' == page ? <BlogsV2 setPage={setPage} /> : null}</div>
         <div>{'socialMedia' == page ? <SocialMedia setPage={setPage} /> : null}</div>
         <div>{'productivity' == page ? <Productivity setPage={setPage} /> : null}</div>
       </div>

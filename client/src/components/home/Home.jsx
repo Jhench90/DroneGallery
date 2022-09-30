@@ -20,7 +20,7 @@ function Home({setPage}) {
                 }}>Social Media</div>
                 <br></br>
                 <div className="homeButton" onClick={(e)=>{
-                    window.open('CV_2022_06_01_Joel_Hench.pdf');
+                    window.open('CV_Joel_Hench.pdf');
                 }}>Resume</div>
             </div>
             

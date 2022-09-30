@@ -1,0 +1,38 @@
+.list {
+    list-style: none;
+}
+
+.columnLeft {
+    float: left;
+    width: 20%;
+}
+
+.columnRight {
+    float: left;
+    width: 60%;
+}
+
+/* Clear floats after the columns */
+.blogRow:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.blogBanner {
+    width: 100%;
+}
+
+.bannerContainer {
+    position: relative;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+}
+
+.bannerCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

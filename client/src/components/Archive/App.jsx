@@ -3,7 +3,7 @@ import React from 'react';
 // import FirstWebsite from './FirstWebsite.jsx';
 // import Leagues from './Leagues.jsx';
 // import NatureBreak from './NatureBreak.jsx';
-import Productivity from './productivity/Productivity.jsx';
+import Productivity from '../productivity/Productivity.jsx';
 // import Ukulele from './Ukulele.jsx';
 // import AboutMe from './AboutMe.jsx';
 // import Blogs from './Blogs.jsx';

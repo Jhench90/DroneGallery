@@ -7,7 +7,9 @@ const PORT = 3000 || process.env.PORT;
 var bodyParser = require('body-parser');
 
 app.use(express.static('client/dist'));
+app.use(express.static('client/src'));
 app.use(bodyParser.json())
+
 
 app.get('/flashcards', (req, res)=>{
   let collection = db.collection('flashcards');

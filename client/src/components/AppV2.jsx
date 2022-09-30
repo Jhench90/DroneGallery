@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
-import AboutMe from './AboutMe.jsx';
-import Blogs from './Blogs.jsx';
-import BlogsV2 from './BlogsV2.jsx';
+import AboutMe from './aboutMe/AboutMe.Jsx';
+import Blogs from './blogs/Blogs.jsx';
+import BlogsV2 from './blogs/BlogsV2.jsx';
 import Drone from './Drone.jsx';
-import Home from './Home.jsx';
+import Home from './home/Home.jsx';
 import Productivity from './productivity/Productivity.jsx';
-import SocialMedia from './SocialMedia.jsx';
+import SocialMedia from './socialMedia/SocialMedia.jsx';
 
 function AppV2() {
   const [page, setPage] = useState('home')

@@ -1,0 +1,59 @@
+.socialMediaTitle {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    font-size: 3rem;
+    color: white;
+}
+.socialMediaTitle:hover {
+    cursor: pointer;
+}
+
+.socialMediaPostsContainer {
+    position: relative;
+    top: 30px;
+}
+
+.postsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+
+.imgPost {
+    height: 350px;
+    width: 350px;
+    margin: 15px;
+}
+
+.imgPost:hover {
+    cursor: pointer;
+}
+
+.socialMediaButton {
+    font-size: 1.3rem;
+    border-radius: 5px;
+    transition: 0.6s;
+    margin-right: 20px;
+    margin-bottom: 50px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.socialMediaButton:hover {
+    cursor: pointer;
+    color: white;
+    background: grey;
+    transition: 0.6s
+}
+
+.buttonsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+}

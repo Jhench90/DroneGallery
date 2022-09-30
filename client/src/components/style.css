@@ -1,0 +1,51 @@
+body {
+  font-family: sans-serif, arial;
+}
+.appContainer {
+  overflow-y: hidden;
+  /* background-image: url("https://jooinn.com/images/metal-pattern-background-3.jpg"); */
+  /* background: rgb(157,152,255);
+background: linear-gradient(90deg, rgba(157,152,255,1) 0%, rgba(116,232,255,1) 88%); */
+}
+.hamburgerMenu {
+  text-align: center;
+  position: fixed;
+  height: 100%;
+  width: 300px;
+  z-index: 5;
+  background-color: grey;
+  opacity: 80%;
+  right: 0px;
+  top: 0px;
+}
+.hamburgerMenuButton {
+  font-size: 1.5rem;
+  color: white;
+  /* font-weight: bold; */
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+  padding: 6px;
+  border-radius: 5px;
+  transition: 0.6s
+}
+.x {
+  text-align: center;
+}
+.hamburgerMenuButton:hover {
+  color: black;
+  background: white;
+  transition: 0.6s;
+  cursor: pointer;
+}
+h4:hover {
+ text-decoration: underline;
+ cursor: pointer;
+}
+.triplinks:hover {
+  text-decoration: underline;
+ cursor: pointer;
+}
+.clickable:hover{
+  cursor: pointer;
+}

@@ -1,0 +1,30 @@
+.aboutMeProfilePic {
+    border: solid white 20px;
+    border-radius: 50%;
+    height: 300px;
+}
+.aboutMeContent {
+    width: 300px;
+    margin-left: 30px;
+    text-align: justify;
+    text-indent: 30px;
+    
+}
+.topMargin {
+    margin-top: 50px;
+    /* background: rgb(157,152,255);
+background: linear-gradient(90deg, rgba(157,152,255,1) 0%, rgba(116,232,255,1) 88%); */
+}
+.connectIcon {
+    height: 50px;
+    margin-left: 10px;
+}
+.connectIcon:hover {
+    cursor: pointer;
+}
+.softwareEngineering {
+    text-align: justify;
+    text-indent: 40px;
+    width: 600px;
+    margin-top: 50px;
+}

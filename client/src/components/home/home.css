@@ -1,0 +1,82 @@
+.homePageBanner {
+    overflow: hidden;
+    height: 1200px;
+}
+
+.homeContainer {
+    overflow: hidden;
+}
+
+.homeButton {
+    transition: 0.6s;
+    width: 300px;
+    text-align: center;
+    font-size: 1.7rem;
+    border: solid white 3px;
+    border-radius: 5px;
+
+}
+
+.homeButton:hover {
+    color: black;
+    background-color: white;
+    cursor: pointer;
+    transition: .6s;
+}
+
+.hamburgerIcon {
+    position: absolute;
+    z-index: 3;
+    top: 50px;
+    right: 50px;
+    height: 70px;
+    transition: 0.6s;
+    filter: invert(50%) sepia(0%) saturate(352%) hue-rotate(87deg) brightness(100%) contrast(100%);
+}
+
+.hamburgerIcon:hover {
+    cursor: pointer;
+    background-color: grey;
+    border-radius: 10px;
+    transition: 0.6s;
+    filter: invert(100%) sepia(0%) saturate(352%) hue-rotate(87deg) brightness(100%) contrast(100%);
+}
+
+.logo {
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    color: white;
+}
+
+.title {
+    font-size: 5rem;
+    margin-bottom: 120px;
+}
+
+.copyright {
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    bottom: 10px;
+    font: 1.5rem;
+    color: rgb(255, 0, 0);
+    background-color: blue;
+}
+.copyrightApp {
+    text-align: center;
+    width: 400px;
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    left: 40%;
+    right: 40%;
+}
+/* .copyright {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font: 1.5rem;
+    color: rgb(255, 0, 0);
+    background-color: blue;
+} */

@@ -11,7 +11,7 @@ class AboutMe extends React.Component {
           <img src='/DronePhoto/AboutMe.webp' className="aboutMeProfilePic"></img>
           <div className="aboutMeContent">
             <h1>About Me</h1>
-            <div>Im Jay. Im a California native currently living near San Francisco. I built this website with React.js as a passion project to show some of the things I am interested in. As a web developer, I have experience building full stack applications. I own several drones and fly them anywhere and everywhere I can. I'm a Tottenham Hotspurs fan, Go Coys! Drop me a message if you'd like to connect. Let's get some coffee.</div>
+            <div>Im Jay. Im a California native currently living near San Francisco. I built this website with React.js as a passion project to show some of the things I am interested in. Its using ArangoDB on the back end and I'm hosting it on an old laptop just for fun. As a web developer, I have experience building full stack applications. I am currently working as a UI developer with United Software Corporation. I'm a Tottenham Hotspurs fan, Go Coys! Drop me a message if you'd like to connect. Let's get some coffee.</div>
             
           </div>
         </div>

@@ -9,7 +9,7 @@ class Blogs extends React.Component {
       missingfield: false,
       incorrectpassword: false,
       banner: 'forest',
-      posts: ['Website Deployment - 5/18/22', 'Intro to Redux - 9/1/22'],
+      posts: ['Website Deployment - 5/18/22'],
       post: {
         banner: '/DronePhoto/DJI_0120_banner.webp', shorttitle: 'website deployment', title: 'How to deploy your personal website on your old laptop', author: 'Jay', date: '5/18/2022', content: `Deploying a server on your old laptop offers advantages and disadvantages to deploying over a standard cloud based service like AWS or Azure. One advantage is you will not be charged for memory usage or computing time. A disadvantage is your download and upload speeds can be limited by the plan you are signed up for with your ISP. The laptop would be running at all times and the electricity bill can increase. In either case, if you wish to register a domain name, you would still need to pay a yearly fee and end up paying some money in the end.
         The following steps were followed for a PC based deployment.

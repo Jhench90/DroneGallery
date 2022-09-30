@@ -41,7 +41,7 @@ function Timer() {
     }
 
     return (
-        <span className="pomodoroTimerContainer" id="pomodoroTimerContainer">
+        <div className="pomodoroTimerContainer" id="pomodoroTimerContainer">
             <audio src="alarm.mp3" type='audio/mp3' id="alarm"/>
             <div className="flexContainer">
                 <div className="pomodoroTitle">Pomodoro Timer</div>
@@ -53,27 +53,27 @@ function Timer() {
                     minutes`}</div>
                 </div>
                 <div className="flexContainer">
-                    <span className="widgetButtons" onClick={(e) => {
+                    <span className="pomodoroButtons" onClick={(e) => {
                         setTime({ minutes: 25, seconds: 0 })
                         changeColor('red')
                     }}>25 Minutes</span>
-                    <span className="widgetButtons" onClick={(e) => {
+                    <span className="pomodoroButtons" onClick={(e) => {
                         setTime({ minutes: 3, seconds: 0 })
                         changeColor('green')
                     }}>Short Break</span>
-                    <span className="widgetButtons" onClick={(e) => {
+                    <span className="pomodoroButtons" onClick={(e) => {
                         setTime({ minutes: 10, seconds: 0 })
                         changeColor('blue')
                     }}>Long Break</span>
                 </div>
                 <div className="flexContainer">
-                    <span className="widgetButtons" onClick={(e) => {
+                    <span className="pomodoroButtons" onClick={(e) => {
                         start()
                     }}>Start</span>
                 </div>
             </div>
 
-        </span>
+        </div>
     )
 }
 

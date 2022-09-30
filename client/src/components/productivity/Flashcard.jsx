@@ -77,7 +77,7 @@ export default function Flashcard() {
     }
     //view switch to add card ?
     return (
-        <span style={{margin: '20px', width: '500px'}}>
+        <div style={{marginLeft: '50px', marginTop: '50px', marginRight: '50px', width: '500px'}}>
 
             <div onClick={() => {
                 switchSides()
@@ -93,13 +93,13 @@ export default function Flashcard() {
                     :
                     <div>{wordBank[wordBankIndex].definition}</div>
                 }
-                <img src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png" height="30px"
+                <img className="hoverPointer" src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png" height="30px"
                     style={{
                         position: 'absolute', left: '-30px', transform: 'rotate(180deg)'
                     }}
                     onClick={() => { changeCard('left') }}
                 />
-                <img src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png" height="30px"
+                <img className="hoverPointer" src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png" height="30px"
                     style={{
                         position: 'absolute', right: '-30px'
                     }}
@@ -118,12 +118,15 @@ export default function Flashcard() {
                 changeCount(50)
                 changeCard('right')
             }}>Memorized</button>
+            <button className="widgetButtons" onClick={()=>{
+                    setView('addNewCard')
+                }}>Add New Card</button>
             </div>
 
             <div className="flexContainerCol">
-                <span onClick={()=>{
-                    setView('addNewCard')
-                }}>Add New Card</span>
+                
+                {view === 'addNewCard' && 
+                <>
                 <br/>
                 <span>Term:</span>
                 <br/>
@@ -136,11 +139,14 @@ export default function Flashcard() {
                 <textarea rows='5' cols='40'  onChange={(e)=>{
                     setNewDefinition(e.target.value)
                 }} value={newDefinition}></textarea>
-                <button onClick={()=>{
+                <button className="widgetButtons" onClick={()=>{
                     addNewCard()
                     setView('flashcard')
                 }}>Submit</button>
+                </>
+                }
+                
             </div>
-        </span>
+        </div>
     )
 }

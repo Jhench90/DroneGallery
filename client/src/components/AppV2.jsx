@@ -17,7 +17,7 @@ function AppV2() {
         <div>{'home' == page ? <Home setPage={setPage} /> : null}</div>
         <div>{'drone' == page ? <Drone setPage={setPage} /> : null}</div>
         <div>{'aboutMe' == page ? <AboutMe setPage={setPage} /> : null}</div>
-        <div>{'blogs' == page ? <BlogsV2 setPage={setPage} /> : null}</div>
+        <div>{'blogs' == page ? <Blogs setPage={setPage} /> : null}</div>
         <div>{'socialMedia' == page ? <SocialMedia setPage={setPage} /> : null}</div>
         <div>{'productivity' == page ? <Productivity setPage={setPage} /> : null}</div>
       </div>

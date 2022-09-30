@@ -5,7 +5,7 @@ import Flashcard from './Flashcard.jsx';
 function Productivity() {
     return (
         <>
-            <div style={{alignItems: 'center', margin: 'auto'}}>
+            <div className="flexContainer">
                 <Timer />
                 <Flashcard />
             </div>

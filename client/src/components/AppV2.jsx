@@ -51,7 +51,7 @@ function AppV2() {
             setPage('productivity')
             setHamburger(false)
           }}>Productivity</div>
-          
+
           <div className="hamburgerMenuButton" onClick={(e) => {
             setPage('socialMedia')
             setHamburger(false)

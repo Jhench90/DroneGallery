@@ -63,7 +63,10 @@ app.post('/flashcards', (req, res)=>{
     ...req.body
   }
   collection.save(doc).then(
-    meta => console.log('Document saved: ', meta._rev)
+    meta => {
+      console.log('Document successfully saved: ', meta._id)
+      res.send(meta);
+    }
   )
 })
 

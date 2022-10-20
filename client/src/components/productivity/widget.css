@@ -45,6 +45,7 @@
 }
 
 .widgetButtons {
+    background-color: white;
     border: solid black 1.5px;
     border-radius: 5px;
     margin: 2px;

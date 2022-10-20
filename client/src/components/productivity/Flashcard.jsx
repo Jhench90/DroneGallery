@@ -29,12 +29,12 @@ export default function Flashcard() {
         if (term.includes('"') || definition.includes('"')) {
             for (let i = 0; i < term.length; i++) {
                 if (term[i] === '"') {
-                    term = term.slice(0, i) + "''" + term.slice(i+1);
+                    term = term.slice(0, i) + "''" + term.slice(i + 1);
                 }
             }
             for (let i = 0; i < definition.length; i++) {
                 if (definition[i] === '"') {
-                    definition = definition.slice(0, i) + "''" + definition.slice(i+1);
+                    definition = definition.slice(0, i) + "''" + definition.slice(i + 1);
                 }
             }
         }
@@ -47,7 +47,7 @@ export default function Flashcard() {
         setNewTerm('')
         axios.post('/flashcards', newCard)
             .then((response) => {
-                let newTermWithMetaData = {...newCard, ...response.data}
+                let newTermWithMetaData = { ...newCard, ...response.data }
                 let newWordBank = [...wordBank]
                 newWordBank.push(newTermWithMetaData);
                 newWordBank.sort((a, b) => a.studyCount - b.studyCount)
@@ -116,13 +116,11 @@ export default function Flashcard() {
                 display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative'
             }}>
                 {side === 'front' ?
-                    <div>
-                        <div style={{ textAlign: 'center', margin: 'auto' }}>
-                            {interpretSpecialCharacters(wordBank[wordBankIndex].word)}
-                        </div>
+                    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative', margin: 'auto', width: '400px', height: '290px', overflow: 'auto' }}>
+                        {interpretSpecialCharacters(wordBank[wordBankIndex].word)}
                     </div>
                     :
-                    <div>
+                    <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative', margin: 'auto', width: '400px', height: '290px', overflow: 'auto'}}>
                         {interpretSpecialCharacters(wordBank[wordBankIndex].definition)}
                     </div>
                 }

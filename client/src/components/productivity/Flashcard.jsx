@@ -83,7 +83,7 @@ export default function Flashcard() {
                 switchSides()
             }} style={{
                 height: '300px',
-                 border: 'solid black 3px', borderRadius: '5px',
+                 border: 'solid black 3px', borderRadius: '10px',
                 display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative'
             }}>
 

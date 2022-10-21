@@ -77,7 +77,6 @@ export default function Flashcard() {
             url: '/flashcards',
             data: patchedWord
         }).then(res => {
-            console.log(res.data)
             // setWordBank(res.data)
         })
     }
